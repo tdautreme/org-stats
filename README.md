@@ -16,7 +16,7 @@ optional arguments:
                         Your github password (Optional)
                         
 Exemple:
-python3 org-stats -o Undefined-Team -u im_an_username -p im_a_password
+python3 org-stats -o Undefined-Team -u tdautreme -p this_is_my_password
 python3 org-stats -o Undefined-Team
 ```
 # Why give username and password ?
