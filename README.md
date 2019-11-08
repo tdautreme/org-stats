@@ -23,4 +23,4 @@ python3 org-stats.py -o Undefined-Team
 You have to give your github username and password only if you want to show private organizations repos you have access
 
 # What does it look like
-![Exemple](https://i.ibb.co/tZ2JQF4/Pres.png)
+![Exemple](https://i.ibb.co/ZHgMG7V/Pres.png)
