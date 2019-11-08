@@ -5,7 +5,7 @@
 
 # How to run it
 ```
-usage: test.py [-h] [-o ORG] [-u USERNAME] [-p PASSWORD]
+usage: org-stats.py [-h] [-o ORG] [-u USERNAME] [-p PASSWORD]
 
 optional arguments:
   -h, --help            show this help message and exit
