@@ -5,7 +5,7 @@
 
 # How to run it
 ```
-usage: test.py [-h] [-o ORG] [-u USERNAME] [-p PASSWORD]
+usage: org-stats.py [-h] [-o ORG] [-u USERNAME] [-p PASSWORD]
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -21,3 +21,6 @@ python3 org-stats.py -o Undefined-Team
 ```
 # Why give username and password ?
 You have to give your github username and password only if you want to show private organizations repos you have access
+
+# What does it look like
+![Exemple](https://i.ibb.co/tZ2JQF4/Pres.png)
