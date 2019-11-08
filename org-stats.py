@@ -55,16 +55,16 @@ def pc(contribution):
     return bcolors.BLUE + str(contribution) + bcolors.ENDC
 
 def pal(add_lines):
-    return bcolors.GREEN + str(add_lines) + "++" + bcolors.ENDC
+    return bcolors.GREEN + str(add_lines) + bcolors.ENDC
 
 def prl(remove_lines):
-    return bcolors.RED + str(remove_lines) + "--" + bcolors.ENDC
+    return bcolors.RED + str(remove_lines) + bcolors.ENDC
 
 def ppd(productivity):
-    return bcolors.PURPLE + str(productivity) + "++-" + bcolors.ENDC
+    return bcolors.PURPLE + str(productivity) + bcolors.ENDC
 
 def ppc(precision):
-    return bcolors.CYAN + str(precision) + "+--" + bcolors.ENDC
+    return bcolors.CYAN + str(precision) + bcolors.ENDC
 
 def pi(info):
     return bcolors.YELLOW + str(info) + bcolors.ENDC
@@ -182,7 +182,6 @@ if repos != None:
                     print ("    " + user.name + " " + pc(user.contribution) + " " + pal(user.add_lines) + " " + prl(user.remove_lines) + " " + ppd(user.productivity) + " " + ppc(user.precision) + " " + ps(user.score))
         print("")
 
-
 total_productivity = total_add_lines + total_remove_lines
 total_precision = total_add_lines - total_remove_lines
 total_score = total_productivity + total_precision
@@ -210,21 +209,21 @@ for user in users:
     print ("    " + pi(rank) + " " + user.name + " " + prl(user.remove_lines) + " " + percent(user.remove_lines, total_remove_lines))
     rank += 1
 
-print ("\n" + pi(">>> ") + ppd("PRODUCTIVITY (ADD + REMOVE)") + pi(" RANK <<<"))
+print ("\n" + pi(">>> ") + ppd("PRODUCTIVITY (") + pal("ADD") + ppd(" + ") + prl("REMOVE")  + ppd(")") + pi(" RANK <<<"))
 users.sort(key=lambda x: x.productivity, reverse=True)
 rank = 1
 for user in users:
     print ("    " + pi(rank) + " " + user.name + " " + ppd(user.productivity) + " " + percent(user.productivity, total_productivity))
     rank += 1
 
-print ("\n" + pi(">>> ") + ppc("PRECISION (ADD - REMOVE)") + pi(" RANK <<<"))
+print ("\n" + pi(">>> ") + ppc("PRECISION (") + pal("ADD") + ppc(" - ") + prl("REMOVE")  + ppc(")") + pi(" RANK <<<"))
 users.sort(key=lambda x: x.precision, reverse=True)
 rank = 1
 for user in users:
     print ("    " + pi(rank) + " " + user.name + " " + ppc(user.precision) + " " + percent(user.precision, total_precision))
     rank += 1
 
-print ("\n" + pi(">>> TOTAL SCORE (PRODUCTIVITY + PRECISION) <<<"))
+print ("\n" + pi(">>> TOTAL SCORE (") + ppd("PRODUCTIVITY") + pi(" + ") + ppc("PRECISION")  + pi(") <<<"))
 users.sort(key=lambda x: x.productivity + x.precision, reverse=True)
 rank = 1
 for user in users:
