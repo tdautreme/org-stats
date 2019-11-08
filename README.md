@@ -1,7 +1,7 @@
 # What we need to run org-stats
 - Python 3.6.8 https://www.python.org/downloads/release/python-368/
-- PyGithub 1.44.1 lib (pip3 install PyGithub==1.44.1) https://github.com/PyGithub/PyGithub
-- art 4.2 lib (pip3 install art==4.2) https://github.com/sepandhaghighi/art
+- PyGithub 1.44.1 lib ```pip3 install PyGithub==1.44.1``` https://github.com/PyGithub/PyGithub
+- art 4.2 lib ```pip3 install art==4.2``` https://github.com/sepandhaghighi/art
 
 # How to run it
 ```
