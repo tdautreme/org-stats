@@ -20,4 +20,4 @@ python3 org-stats -o Undefined-Team -u tdautreme -p this_is_my_password
 python3 org-stats -o Undefined-Team
 ```
 # Why give username and password ?
-You have to give your github username and password to show private organizations repos you have access
+You have to give your github username and password only if you want to show private organizations repos you have access
