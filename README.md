@@ -1,26 +1,28 @@
 # What we need to run org-stats
 - Python 3.6.8 https://www.python.org/downloads/release/python-368/
-- PyGithub 1.44.1 lib ```pip3 install PyGithub==1.44.1``` https://github.com/PyGithub/PyGithub
-- art 4.2 lib ```pip3 install art==4.2``` https://github.com/sepandhaghighi/art
+- PyGitHub and Art, install by running `pip install -r requirements.txt`.
 
 # How to run it
 ```
-usage: org-stats.py [-h] [-o ORG] [-u USERNAME] [-p PASSWORD]
+usage: org-stats.py [-h] [-o ORG] [-u USERNAME] [-p PASSWORD] [-t ACCESS_TOKEN]
 
 optional arguments:
   -h, --help            show this help message and exit
-  -o ORG, --org ORG     Github target organization name
+  -o ORG, --org ORG     GitHub target organization name
   -u USERNAME, --username USERNAME
-                        Your github username (Optional)
+                        Your GitHub username (Optional)
   -p PASSWORD, --password PASSWORD
-                        Your github password (Optional)
+                        Your GitHub password (Optional)
+  -t ACCESS_TOKEN, --access-token ACCESS_TOKEN
+                        Your GitHub access token (Optional)
                         
 Exemple:
 python3 org-stats.py -o Undefined-Team -u tdautreme -p this_is_my_password
+python3 org-stats.py -o Undefined-Team -t my_secret_access_token
 python3 org-stats.py -o Undefined-Team
 ```
-# Why give username and password ?
-You have to give your github username and password only if you want to show private organizations repos you have access
+# Why give username and password or access token?
+You have to give your GitHub username and password or access token only if you want to show private organizations repos you have access to.
 
 # What does it look like
-![Exemple](https://i.ibb.co/ZHgMG7V/Pres.png)
+![Example](https://i.ibb.co/ZHgMG7V/Pres.png)

@@ -79,9 +79,10 @@ def perror(error):
     return bcolors.RED + "ERROR: " + str(error) + bcolors.ENDC
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-o', '--org', nargs=1, help="Github target organization name")
-parser.add_argument('-u', '--username', nargs=1, help="Your github username (Optional)")
-parser.add_argument('-p', '--password', nargs=1, help="Your github password (Optional)")
+parser.add_argument('-o', '--org', nargs=1, help="GitHub target organization name")
+parser.add_argument('-u', '--username', nargs=1, help="Your GitHub username (Optional)")
+parser.add_argument('-p', '--password', nargs=1, help="Your GitHub password (Optional)")
+parser.add_argument('-t', '--access-token', nargs=1, help="Your GitHub access token (Optional)")
 args = parser.parse_args()
 
 ferror = False
@@ -98,6 +99,8 @@ if ferror:
 
 if args.username != None:
     g = Github(args.username[0], args.password[0])
+elif args.access_token:
+    g = Github(args.access_token[0])
 else:
     g = Github()
 
@@ -107,7 +110,7 @@ except GithubException as e:
     print(perror(str(e.data['message'])))
     exit()
 except ConnectionError as e:
-    print(perror("Connexion failed"))
+    print(perror("Connection failed"))
     exit()
 except Exception as e:
     print(perror("Other: " + str(e)))
